@@ -20,3 +20,8 @@ mat-table.employee-table mat-header-cell:not(:last-child),
 mat-table.employee-table mat-cell:not(:last-child) {
   border-right: 1px solid currentColor;
 }
+
+.empty-data {
+  font-size: 1.5em;
+  text-align: center;
+}

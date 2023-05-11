@@ -25,4 +25,8 @@
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
 
   <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+
+  <div class="empty-data" *matNoDataRow>
+    No data available
+  </div>
 </mat-table>
