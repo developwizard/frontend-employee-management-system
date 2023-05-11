@@ -11,13 +11,13 @@ import {CreateEmployeeComponent} from './create-employee/create-employee.compone
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CreateEmployeeComponent
+    AppComponent
   ],
   imports: [
     AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
+    CreateEmployeeComponent,
     EmployeeListComponent,
     HttpClientModule,
     ToolbarComponent

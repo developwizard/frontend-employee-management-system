@@ -1,0 +1,18 @@
+.example-form {
+  margin: 0 auto;
+  min-width: 150px;
+  max-width: 750px;
+  width: 100%;
+}
+
+.mat-form-field-width {
+  min-width: 100%;
+}
+.header-text {
+  margin: 1em;
+  text-align: center;
+}
+
+mat-form-field {
+  margin: 0.5em 0;
+}

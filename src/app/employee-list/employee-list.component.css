@@ -1,3 +1,7 @@
+.header-text {
+  margin: 1em;
+  text-align: center;
+}
 mat-cell.mat-column-emailId {
   font-style: italic;
 }

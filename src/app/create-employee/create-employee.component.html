@@ -1,1 +1,32 @@
-<p>create-employee works!</p>
+<h4 class="header-text">Create new employee</h4>
+<form class="example-form" [formGroup]="newEmployeeForm">
+  <mat-form-field class="mat-form-field-width" appearance="outline">
+    <mat-label>First name</mat-label>
+    <input type="text" matInput formControlName="firstNameFormControl">
+    <mat-error *ngIf="firstName?.errors?.['required']">
+      First name is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="mat-form-field-width" appearance="outline">
+    <mat-label>Last name</mat-label>
+    <input type="text" matInput formControlName="lastNameFormControl">
+    <mat-error *ngIf="lastName?.errors?.['required']">
+      Last name is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="mat-form-field-width" appearance="outline">
+    <mat-label>Email</mat-label>
+    <input type="email" matInput formControlName="emailFormControl" placeholder="email@example.com">
+    <mat-error *ngIf="email?.errors?.['email'] && !email?.errors?.['required']">
+      Please enter a valid email address
+    </mat-error>
+    <mat-error *ngIf="email?.errors?.['required']">
+      Email is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" [disabled]="newEmployeeForm.invalid" (click)="onFormSubmit()">Submit
+  </button>
+</form>
