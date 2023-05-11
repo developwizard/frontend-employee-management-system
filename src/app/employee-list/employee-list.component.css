@@ -1,0 +1,22 @@
+mat-cell.mat-column-emailId {
+  font-style: italic;
+}
+
+mat-table.employee-table {
+  min-width: 90%;
+  margin: 0 1em;
+}
+
+mat-cell.mat-column-actions > .mat-mdc-raised-button {
+  margin-right: 1em;
+}
+
+mat-table.employee-table mat-header-cell,
+mat-table.employee-table mat-cell {
+  justify-content: center;
+}
+
+mat-table.employee-table mat-header-cell:not(:last-child),
+mat-table.employee-table mat-cell:not(:last-child) {
+  border-right: 1px solid currentColor;
+}

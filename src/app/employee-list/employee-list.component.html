@@ -1,0 +1,28 @@
+<mat-table class="employee-table mat-elevation-z8" [dataSource]="dataSource">
+  <ng-container matColumnDef="firstName">
+    <mat-header-cell *matHeaderCellDef>First Name</mat-header-cell>
+    <mat-cell *matCellDef="let employee">{{employee.firstName}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="lastName">
+    <mat-header-cell *matHeaderCellDef>Last Name</mat-header-cell>
+    <mat-cell *matCellDef="let employee">{{employee.lastName}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="emailId">
+    <mat-header-cell *matHeaderCellDef>Email</mat-header-cell>
+    <mat-cell *matCellDef="let employee">{{employee.emailId}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <mat-header-cell *matHeaderCellDef>Actions</mat-header-cell>
+    <mat-cell *matCellDef="let row">
+      <button mat-raised-button color="primary" (click)="onEditClicked(row)">Edit</button>
+      <button mat-raised-button color="warn" (click)="onDeleteClicked(row)">Delete</button>
+    </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+
+  <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+</mat-table>
