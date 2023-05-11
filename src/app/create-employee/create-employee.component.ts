@@ -18,7 +18,7 @@ import {Router} from "@angular/router";
     MatButtonModule,
     MatInputModule,
     ReactiveFormsModule
-  ],
+  ]
 })
 export class CreateEmployeeComponent {
   newEmployeeForm: FormGroup

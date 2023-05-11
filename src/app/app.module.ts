@@ -8,6 +8,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {AppRoutingModule} from "./app-routing.module";
 import {ToolbarComponent} from './toolbar/toolbar.component';
 import {CreateEmployeeComponent} from './create-employee/create-employee.component';
+import {UpdateEmployeeComponent} from './update-employee/update-employee.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {CreateEmployeeComponent} from './create-employee/create-employee.compone
     CreateEmployeeComponent,
     EmployeeListComponent,
     HttpClientModule,
-    ToolbarComponent
+    ToolbarComponent,
+    UpdateEmployeeComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

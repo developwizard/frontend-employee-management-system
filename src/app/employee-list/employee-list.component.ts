@@ -5,6 +5,7 @@ import {EmployeeService} from "../service/employee.service";
 import {CommonModule} from "@angular/common";
 import {MatButtonModule} from "@angular/material/button";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-employee-list',
@@ -23,11 +24,11 @@ export class EmployeeListComponent implements OnInit {
   displayedColumns: string[] = ['firstName', 'lastName', 'emailId', 'actions'];
   dataSource: MatTableDataSource<Employee> = new MatTableDataSource<Employee>();
 
-  constructor(private employeeService: EmployeeService) {
+  constructor(private employeeService: EmployeeService, private router: Router) {
   }
 
-  onEditClicked(row: Employee) {
-    console.log(row);
+  onEditClicked(employee: Employee) {
+    this.router.navigate(['/employees', employee.id]);
   }
 
   onDeleteClicked(row: Employee) {
