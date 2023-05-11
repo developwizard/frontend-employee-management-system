@@ -6,6 +6,7 @@ import {EmployeeListComponent} from './employee-list/employee-list.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatTableModule} from "@angular/material/table";
 import {MatButtonModule} from "@angular/material/button";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import {MatButtonModule} from "@angular/material/button";
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
+    HttpClientModule,
     MatButtonModule,
     MatTableModule
   ],
