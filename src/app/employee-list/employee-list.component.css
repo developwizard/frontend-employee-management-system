@@ -25,3 +25,9 @@ mat-table.employee-table mat-cell:not(:last-child) {
   font-size: 1.5em;
   text-align: center;
 }
+
+.loading-spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

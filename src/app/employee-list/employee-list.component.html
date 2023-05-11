@@ -1,4 +1,4 @@
-<mat-table class="employee-table mat-elevation-z8" [dataSource]="dataSource">
+<mat-table *ngIf="!isLoading;else loadingSpinner" class="employee-table mat-elevation-z8" [dataSource]="dataSource">
   <ng-container matColumnDef="firstName">
     <mat-header-cell *matHeaderCellDef>First Name</mat-header-cell>
     <mat-cell *matCellDef="let employee">{{employee.firstName}}</mat-cell>
@@ -30,3 +30,12 @@
     No data available
   </div>
 </mat-table>
+
+<ng-template #loadingSpinner>
+  <div class="loading-spinner-container">
+    <mat-progress-spinner
+      color="primary"
+      mode="indeterminate">
+    </mat-progress-spinner>
+  </div>
+</ng-template>
