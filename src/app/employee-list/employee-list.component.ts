@@ -15,7 +15,8 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
     CommonModule,
     MatButtonModule,
     MatProgressSpinnerModule,
-    MatTableModule]
+    MatTableModule
+  ]
 })
 export class EmployeeListComponent implements OnInit {
   isLoading: boolean = true;
@@ -31,6 +32,10 @@ export class EmployeeListComponent implements OnInit {
 
   onDeleteClicked(row: Employee) {
     console.log(row);
+    // this.employeeService.deleteEmployee(row.id)
+    const index = this.dataSource.data.indexOf(row);
+    this.dataSource.data.splice(index, 1);
+    this.dataSource._updateChangeSubscription();
   }
 
   ngOnInit(): void {
