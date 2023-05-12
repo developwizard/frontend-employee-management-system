@@ -33,7 +33,7 @@ export class EmployeeListComponent implements OnInit {
   }
 
   onEditClicked(employee: Employee) {
-    this.router.navigate(['/employees', employee.id]);
+    this.router.navigate(['/employees', 'update', employee.id]);
   }
 
   onDeleteClicked(employee: Employee) {
@@ -44,6 +44,10 @@ export class EmployeeListComponent implements OnInit {
         this.dataSource.data.splice(index, 1);
         this.dataSource._updateChangeSubscription();
       });
+  }
+
+  onViewClicked(employee: Employee) {
+    this.router.navigate(['/employees', employee.id]);
   }
 
   ngOnInit(): void {

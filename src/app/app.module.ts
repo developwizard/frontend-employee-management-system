@@ -9,6 +9,7 @@ import {AppRoutingModule} from "./app-routing.module";
 import {ToolbarComponent} from './toolbar/toolbar.component';
 import {CreateEmployeeComponent} from './create-employee/create-employee.component';
 import {UpdateEmployeeComponent} from './update-employee/update-employee.component';
+import {ViewEmployeeComponent} from './view-employee/view-employee.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {UpdateEmployeeComponent} from './update-employee/update-employee.compone
     EmployeeListComponent,
     HttpClientModule,
     ToolbarComponent,
-    UpdateEmployeeComponent
+    UpdateEmployeeComponent,
+    ViewEmployeeComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

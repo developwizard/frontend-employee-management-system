@@ -20,6 +20,7 @@
     <mat-cell *matCellDef="let row">
       <button mat-raised-button color="primary" (click)="onEditClicked(row)">Edit</button>
       <button mat-raised-button color="warn" (click)="onDeleteClicked(row)">Delete</button>
+      <button mat-raised-button (click)="onViewClicked(row)">View</button>
     </mat-cell>
   </ng-container>
 

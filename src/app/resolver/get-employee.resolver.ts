@@ -7,7 +7,7 @@ import {Observable} from "rxjs";
 @Injectable({
   providedIn: 'root'
 })
-export class UpdateEmployeeResolver implements Resolve<Employee> {
+export class GetEmployeeResolver implements Resolve<Employee> {
 
   constructor(private employeeService: EmployeeService) {}
 
